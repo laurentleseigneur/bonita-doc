@@ -51,7 +51,7 @@ You'll then have to specify interactively the properties of your project.
 
 ⚠️ You can avoid the interactive mode by specifying all properties of your project directly in the command line, but by doing that you'll bypass the validation performed on the properties content.
 
-#### Generated prpject
+#### Generated project
 
 A folder named _[your artifact id]_ is created, with your Bonita Rest API Extension project, ready to use.
 Using the terminal you can `cd` into this folder and run:
