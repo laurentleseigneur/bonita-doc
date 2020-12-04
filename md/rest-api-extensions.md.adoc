@@ -1,8 +1,8 @@
 = REST API extensions
 
-::: info
+NOTE:
 *Note:* For Performance, Efficiency, and Teamwork editions only.
-:::
+
 
 REST API extensions provide a solution for integration between forms/pages and third party systems (including Bonita BPM Engine). They can be used to query xref:define-and-deploy-the-bdm.adoc[business data], Bonita BPM Engine APIs, or an external information
 system (such as a database, web service, LDAP directory...). They also help to keep a clean separation between the front-end (forms, pages, and interfaces visible to users) and the back-end (processes).
@@ -19,9 +19,9 @@ Prerequisites for developing a REST API extension are:
 * Basic knowledge of Maven.
 * *Access to http://central.maven.org/maven2[Maven central repository]*. If your provider is restricting Internet access you may configure https://maven.apache.org/guides/mini/guide-proxies.html[proxy settings] or create a https://maven.apache.org/guides/mini/guide-mirror-settings.html[mirror repository].
 
-::: warning
+NOTE:
 *Mirror configuration:* When setting a mirror using a `<mirrorOf>*</mirrorOf>` redirection, add an exception for the studio internal repository id like this: `<mirrorOf>*,!studio-internal-repository</mirrorOf>` in your `settings.xml`
-:::
+
 
 == Example description
 

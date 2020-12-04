@@ -1,8 +1,8 @@
 = Licenses
 
-::: info
+NOTE:
 *Note:* For Performance, Efficiency, and Teamwork editions only.
-:::
+
 
 Bonita BPM 7.1 introduces a case-counter mechanism to align with the Bonita BPM Subscription edition licensing model. This page explains how to manage the license for your Bonita BPM Platform.
 

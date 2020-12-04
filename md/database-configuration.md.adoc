@@ -12,13 +12,13 @@ Bonita BPM Engine connection to the database is done through the Hibernate libra
 This provides a level of abstraction between the engine and the RDBMS. +
 Bonita BPM comes with a set of optimized initialization scripts for the https://customer.bonitasoft.com/support-policies[supported RDBMSs].
 
-::: info
+NOTE:
 Some configuration file detailed below are located under `setup` folder. See xref:BonitaBPM_platform_setup.adoc[Bonita BPM platform setup tool] for more information about platform configuration.
-:::
 
-::: info
+
+NOTE:
 This page explains database configuration for Bonita BPM Engine data. If you are also using xref:define-and-deploy-the-bdm.adoc[business data objects], these can be stored in a separate database. By default, Bonita BPM comes with an h2 database. For production purposes, we recommend that you xref:database-configuration-for-business-data.adoc[configure a different database for business data].
-:::
+
 
 [discrete]
 ==== Default h2 database
@@ -31,10 +31,10 @@ For production purposes, you must modify the configuration to use another RDBMS.
 [discrete]
 ==== Steps to switch to another RDBMS
 
-::: warning
+NOTE:
 Please note this procedure cannot be performed using the Bonita Studio. The Bonita Studio can run only on the H2 Database.
 To use Bonita BPM on another RDBMS, please use a xref:_basic-bonita-bpm-platform-installation.adoc[bundle] or set up a xref:deploy-bundle.adoc[standalone server].
-:::
+
 
 In order to configure Bonita BPM to work with your RDBMS, you need to perform the following steps:
 
@@ -45,15 +45,15 @@ In order to configure Bonita BPM to work with your RDBMS, you need to perform th
 . Remove h2
 . Configure RDBMS-specific settings
 
-::: warning
+NOTE:
 There is a known issue between Bitronix (the Transaction Manager shipped by Bonitasoft for the Tomcat bundle & inside Deploy bundle for Tomcat) and Microsoft SQL Server driver (refer to: https://msdn.microsoft.com/en-us/library/aa342335.aspx[MSDN note], http://bitronix-transaction-manager.10986.n7.nabble.com/Failed-to-recover-SQL-Server-Restart-td148.html[Bitronix note]).
 Therefore, using Bitronix as a Transaction Manager with SQL Server is not recommended. Our recommendation is to use the JBoss bundle provided by Bonitasoft.
-:::
 
-::: warning
+
+NOTE:
 Some RDBMSs require a specific configuration, which must be done before you complete your installation. +
 If you do not complete the specific configuration for your RDBMS, your installation may fail.
-:::
+
 
 +++<a id="database_creation">++++++</a>+++
 
@@ -69,9 +69,9 @@ Also, note that the owner of the new schema must have following privileges:
 * CREATE INDEX
 * SELECT, INSERT, UPDATE, DELETE on created TABLE
 
-:::info
+NOTE:
 CREATE TABLE and CREATE INDEX are not required after first start in normal use. If the same SQL user is used with xref:migrate-from-an-earlier-version-of-bonita-bpm.adoc[migration tool], then this user needs this grants.
-:::
+
 
 To create the database, we recommend you refer to your RDBMS documentation:
 
@@ -175,10 +175,10 @@ It must describe the driver jar and the JVM packages that JBoss 7 does not provi
 The exact details of what must be included depend of the driver jar.
 *Warning:* You might need to edit the `module.xml` in order to match exactly the JDBC driver jar file name.
 
-::: info +
+NOTE: +
 *Note:* By default, when JBoss starts, it removes any comments from `standalone/configuration/standalone.xml` and formats the file.
 If you need to retrieve the previous version of this file, go to `standalone/configuration/standalone_xml_history`.
-:::
+
 
 [discrete]
 ==== Tomcat 7
@@ -403,11 +403,11 @@ GRANT FORCE ANY TRANSACTION TO bonita;
 
 === SQL Server
 
-::: warning
+NOTE:
 There is a known issue between Bitronix (the Transaction Manager shipped by Bonitasoft in the Tomcat bundle and in the Tomcat directories of the Deploy bundle) and the Microsoft SQL Server driver
 (refer to: https://msdn.microsoft.com/en-us/library/aa342335.aspx[MSDN note], http://bitronix-transaction-manager.10986.n7.nabble.com/Failed-to-recover-SQL-Server-Restart-td148.html[Bitronix note]).
 Therefore, using Bitronix as a Transaction Manager with SQL Server is not recommended. Our recommendation is to use the JBoss bundle provided by Bonitasoft.
-:::
+
 
 ==== XA Transactions
 

@@ -1,8 +1,8 @@
 = Generate process documentation
 
-::: info
+NOTE:
 *Note:* For Bonita BPM Performance, Efficiency, and Teamwork editions only.
-:::
+
 
 == Overview
 

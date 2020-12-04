@@ -1,8 +1,8 @@
 = Single sign-on with CAS
 
-::: info
+NOTE:
 *Note:* For Performance, Efficiency, and Teamwork editions only.
-:::
+
 
 This pages explains how to configure your Bonita BPM Platform system to use CAS to provide single sign-on (SSO). It assumes you already have a working CAS service. All Bonita BPM users must be registered in CAS.
 
@@ -90,9 +90,9 @@ Right after the opening `<security-domains>` tag, insert these lines (specifying
 </security-domain>
 ----
 
-::: warning
+NOTE:
 *Warning*: module names must be unique (from the example above, BonitaAuthentication-1 is the module name). Therefore, remove the unecessary ones
-:::
+
 
 . In the `CasLoginModule` configuration, check that the `principalGroupName` property is set to `CallerPrincipal`. This is required to retrieve the username from the Bonita application.
 Bonita BPM uses the CAS LoginModule in the JASIG implementation, so see the CAS LoginModule section of the https://wiki.jasig.org/display/CASC/JAAS+Integration[Jasig documentation] for more information.
@@ -133,9 +133,9 @@ BonitaAuthentication-1 {
 };
 ----
 +
-::: warning
+NOTE:
 *Warning*: module names must be unique (from the example above, BonitaAuthentication-1 is the module name). Therefore, remove the unecessary ones
-:::
+
 +
 The JAAS configuration file, `jaas-standard.cfg`, is sorted by sets of authentication modules. For Bonita BPM, each set matches a tenant configuration and the name is prefixed with _BonitaAuthentication-`<tenant-id>`_. Make sure there is a set of authentication modules for each tenant in your platform. For each tenant, set the CAS service to point to the application login page and set `casServerUrlPrefix` to point to the CAS server.
 
@@ -249,9 +249,9 @@ For detailed information about the procedure to install Restful access on your C
 * http://apereo.github.io/cas/4.2.x/index.html[CAS SSO RESTful API]
 * xref:rest-api-overview.adoc[Bonita BPM REST API]
 
-::: info
+NOTE:
 *Note:* All calls issued to get the TGT or ST are made to the CAS SSO server.
-:::
+
 
 [discrete]
 ==== Getting the Ticket Granting Ticket (TGT)
@@ -322,9 +322,9 @@ Take the ST response and paste it in the url of the Bonita BPM Engine login requ
 
 Use a *Bonita BPM Portal* URL where the <<restricted_cas_urls,CAS AuthenticationFilter applies>> for authentication to work.
 
-::: warning
+NOTE:
 Prefer GET over POST to authenticate because experience has shown that in some server configuration, POST parameters cannot be retrieved in the CAS authentication web filter.
-:::
+
 
 [discrete]
 ===== *Authentication to Bonita BPM Engine* with GET
@@ -374,8 +374,8 @@ Use a Bonita BPM Portal SSO protected URL for this action.
 
 You are now logged into Bonita BPM Portal and REST API calls will succeed.
 
-::: warning
+NOTE:
 Cookies must be enabled in REST client side for authentication to persist across REST API calls. +
 Therefore, calling web application root context may not work (e.g. `/bonita` by default) because session cookie seems not to be set on all web server configurations.
 *Use a protected URL to authenticate to Bonita BPM Portal when using the ticket parameter with POST method.*
-:::
+

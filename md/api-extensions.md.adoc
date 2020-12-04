@@ -19,17 +19,17 @@ You need to deploy the REST API zip archive using Bonita BPM Portal:
 
 REST API extensions use the same authorization mechanism as the standard Bonita BPM REST APIs. When you import the extension, the information in `page.properties` is used to create the appropriate resource permission mappings in Bonita BPM (see xref:rest-api-authorization.adoc[REST API authorization] for information about REST API security configuration).
 
-::: info
+NOTE:
 *Note*: It is also possible to deploy a REST API extension using link:portal-api.md#page[REST portal API / "page" resource].
-:::
 
-::: info
+
+NOTE:
 *Note*: The deployment of the REST API extensions should always be made from the portal or its APIs, not directly from Engine APIs. Notably, the createPage() method of the Engine PageAPI would alllow you to deploy a REST API extension, but would not update the security settings, meaning that you would not be able to access it at runtime.
-:::
 
-::: warning
+
+NOTE:
 *Warning*: If you are running Bonita BPM in a cluster, after you import a REST API extension, you must restart the application server on all the cluster nodes.
-:::
+
 
 +++<a id="usage">++++++</a>+++
 
@@ -48,9 +48,9 @@ If the pages declare its resources correctly, then every user being able to acce
 However, if you need to grant access to this API extention to some users regardless of the pages they have access to, then you need to add link:rest-api-authorization.md#custom-permissions-mapping[custom permissions] for these users. +
 In order to do so, edit `custom-permissions-mapping.properties` to give the permissions (value of the property `apiExtension.permissions`) declared in the page.properties of the REST API extension to the required profiles or users.
 
-::: info
+NOTE:
 *Note*: REST API permissions are stored in the user's session and new permissions will only be effective for a user the next time he logs in to the portal.
-:::
+
 
 == REST API extension examples
 

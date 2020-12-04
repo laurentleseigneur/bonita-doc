@@ -1,8 +1,8 @@
 = Multi-tenancy and tenant configuration
 
-::: info
+NOTE:
 *Note:* For Performance edition only.
-:::
+
 
 This page explains the architecture and configuration of a multi-tenant system using Bonita BPM.
 
@@ -47,13 +47,13 @@ A tenant can be created using the Java PlatformAPI (see the http://documentation
 NOTE: If xref:define-and-deploy-the-bdm.adoc[business objects] will be deployed in the newly created tenant do not forget to xref:database-configuration-for-business-data.adoc[create the business data database and configure specific data sources].
 This must be done for each tenant that will use the xref:define-and-deploy-the-bdm.adoc[Business Data] feature.
 
-::: warning
+NOTE:
 *Important* +
 Once a tenant has been created and activated, default theme is not yet loaded. +
 Therefore, as long as you have not logged in to the new tenant, the login page will miss the default theme.
 
 After the first login, default theme will be loaded and the login page will look as usual.
-:::
+
 
 === Java PlatformAPI
 

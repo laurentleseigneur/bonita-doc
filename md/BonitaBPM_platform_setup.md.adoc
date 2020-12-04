@@ -9,9 +9,9 @@ In this section you will learn what the Platform setup tool is and how to use it
 The _Platform setup tool_ handles the creation of the database schema and the configuration of Bonita BPM Platform. +
 It is located in the xref:deploy-bundle.adoc[deploy bundle] and in both xref:tomcat-bundle.adoc[Tomcat] and xref:jboss-bundle.adoc[JBoss] bundles.
 
-::: info
+NOTE:
 In Tomcat and JBoss bundles you can find the tool in the `setup` folder
-:::
+
 
 === Structure
 
@@ -49,10 +49,10 @@ Set the right db vendor by commenting and uncommenting properties inside this fi
 
 If you are using an Oracle or Microsoft SQL Server database, you will need to add the related JDBC driver in the `lib` folder.
 
-::: warning
+NOTE:
 This database configuration is only for the Platform setup tool. You still need to configure the database for your Tomcat or JBoss bundle. +
 To do so, refer to the xref:tomcat-bundle.adoc[Tomcat] and xref:jboss-bundle.adoc[JBoss] bundles pages.
-:::
+
 
 +++<a id="init_platform_conf">++++++</a>+++
 
@@ -60,9 +60,9 @@ To do so, refer to the xref:tomcat-bundle.adoc[Tomcat] and xref:jboss-bundle.ado
 
 You can initialize Bonita BPM Platform manually on an empty database using the _Platform setup tool_.
 
-::: info
+NOTE:
 Remember that in the xref:tomcat-bundle.adoc[Tomcat] and xref:jboss-bundle.adoc[JBoss] bundles, this is done automatically.
-:::
+
 
 To do so, proceed as follows:
 
@@ -88,13 +88,13 @@ If you want to modify the configuration of an already initialized Bonita BPM Pla
 . Run `setup.sh push` or `setup.bat push` from the tool.
 . Start Bonita BPM Platform.
 
-::: info
+NOTE:
 Note that the _Platform Setup tool_ does not need the Bonita BPM Server to be running for the configuration to be updated. However, the server needs to be restarted for the changes to take effect.
-:::
 
-::: warning
+
+NOTE:
 Keep in mind that the folder *`platform_conf/initial`* is not used anymore once the platform has been initialized for the first time. To update your configuration, only the *`platform_conf/current`* folder is taken into account.
-:::
+
 
 == Troubleshooting
 

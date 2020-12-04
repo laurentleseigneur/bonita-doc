@@ -1,8 +1,8 @@
 = Performance tuning
 
-::: info
+NOTE:
 *Note:* For Performance edition only.
-:::
+
 
 This page contains information that you can use to tune the Bonita BPM Engine to get the best performance in your platform. +
 It assumes that you are familiar with Java threads, concurrent execution, XML, DB connection pools, your DB instance, cache policies, scheduling, connectors, network speed, I/O, Java Virtual Machine configuration, JTA and transaction management. +
@@ -95,12 +95,12 @@ This protocol comes with a cost, and this cost is dependent of the implementatio
 The HTTP access mode is available using our natively provided link:configure-client-of-bonita-bpm-engine[bonita-client library]. It can also be used from other
 technologies like PHP, .Net or Javascript (in that case, you need to develop your our client).
 
-::: warning
+NOTE:
 We do not guarantee to keep the http protocol stable, so we strongly recommend that you use
 
 * the standard bonita-client library
 * the same version for both the client and the server
-:::
+
 
 This mode
 

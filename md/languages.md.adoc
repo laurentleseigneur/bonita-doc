@@ -29,9 +29,9 @@ For the web mobile version:
 
 == Add a language to Bonita BPM Portal
 
-::: info
+NOTE:
 Instructions below assume that the language you want to add is already available in the community translation project. If translation is not available see <<Translate_BonitaB_PM_Portal,Translate Bonita BPM Portal>> for instruction about how to collaborate to a new or ongoing translation.
-:::
+
 
 Instructions below explain how to add a language to Bonita BPM Portal. Steps below involve using content created by Bonitasoft community and therefore not officially supported.
 

@@ -1,8 +1,8 @@
 = Insert data in a .docx/.odt template
 
-::: info
+NOTE:
 *Note:* For Performance, Efficiency, and Teamwork editions only.
-:::
+
 
 The *insert data in a .docx/.odt template* connector allows to fill a specified template file by inserting values coming from the current process instance, for example from a form attached to a human task.
 
@@ -20,9 +20,9 @@ The generated file can replace the template in the same document or be stored in
 
 === Using Word (docx)
 
-::: info
+NOTE:
 *Note:* Tested versions are *Microsoft Word 2007/2010*. This connector may work with later versions.
-:::
+
 
 ==== Create a `field`
 

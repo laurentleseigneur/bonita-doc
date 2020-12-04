@@ -105,9 +105,9 @@ To enable custom page debug mode, edit xref:BonitaBPM_platform_setup.adoc[`conso
 
 To work on a page in debug mode:
 
-::: info
+NOTE:
 On a Tomcat installation, `<java.io.tmpdir>` points to `<TOMCAT_HOME>/temp/`
-:::
+
 
 . Import your custom page zip archive into the portal. This creates a directory `<java.io.tmpdir>/bonita_portal_*/tenants/tenant_id/pages/custompage_<your custom page>`.
 . Publish the page to a profile, then log out and log in as a user having this profile.

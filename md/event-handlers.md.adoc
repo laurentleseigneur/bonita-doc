@@ -1,8 +1,8 @@
 = Event handlers
 
-::: info
+NOTE:
 *Note:* For Performance, Efficiency, and Teamwork editions only.
-:::
+
 
 An event handler is an extension to the engine that is configured to run when a specified event occurs.
 You can add event handlers for several purposes and you can configure which events you want to catch.
@@ -17,9 +17,9 @@ You can create an event handler to track any change to any object in the databas
 
 At the end of this page there is a list of all the events.
 
-::: warning
+NOTE:
 In a cluster environment, Event handlers must be Serializable (implements Serializable and have all its fields serializable or transient) because they are shared with other nodes of the cluster.
-:::
+
 
 == Example: deploy an event handler
 
