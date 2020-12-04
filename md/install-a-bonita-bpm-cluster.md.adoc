@@ -1,12 +1,12 @@
 = Install a Bonita BPM cluster
 
-NOTE:
+::: info
 *Note:* The cluster feature is a Subscription feature for *Performance* edition only.
+:::
 
-
-NOTE:
+::: warning
 It is possible to manage the lifecycle of a node using the API to connect directly to the node, but this bypasses the load balancer so should be done with care and only in exceptional circumstances.
-
+:::
 
 You will learn here how to create a cluster in two ways:
 
@@ -41,9 +41,9 @@ When done you will have a database with all tables created and with a table `CON
 * Ensure that you link:database-configuration.md#database_creation[have a database installed and configured for the platform].
 * In case you use link:define-and-deploy-the-bdm[Business data], ensure that you xref:database-configuration-for-business-data.adoc[have a database installed and configured for the Business Data].
 * Download the Bonita BPM xref:deploy-bundle.adoc[Deploy bundle] and unzip it at some place of your choice.
-NOTE:
+::: info
 The platform setup tool is also present in the Tomcat or JBoss bundle under the `setup` directory.
-
+:::
 * Configure it as described in the link:BonitaBPM_platform_setup.md#configure_tool[platform setup tool page]
 * Update configuration files that are in the `platform_conf/initial` folder of the platform setup tool.
  ** In `platform_init_engine/bonita-platform-init-community-custom.properties` uncomment and update the value of `activeProfiles` property from *`community`* to *`community,performance`*.
@@ -140,15 +140,15 @@ In this case you already have a Bonita BPM Platform running as single node insta
 Some properties of the Bonita BPM Platform needs to be changed in order to make the cluster work.
 
 * Download the Bonita BPM xref:deploy-bundle.adoc[Deploy bundle] and unzip it at some place of your choice.
-NOTE:
+::: info
 The platform setup tool is also present in the Tomcat or JBoss bundle under the `setup` directory.
-
+:::
 * Configure it as described in the xref:BonitaBPM_platform_setup.adoc[platform setup tool page]
 * Run the `setup.sh pull` or `setup.bat pull`. This will retrieve the configuration of your platform under `platform_conf/current` folder.
 * Update configuration files that are in the `platform_conf/initial` folder of the platform setup tool.
  ** In `platform_init_engine/bonita-platform-init-community-custom.properties` as described in <<create_init_bonita_db,Create and initialize database>>.
  ** In `platform_engine/bonita-platform-sp-custom.properties` as described in <<create_init_bonita_db,Create and initialize database>>.
-NOTE:
+::: info
 * *The 3 steps below are required when Bonita BPM version is `7.3.1` or lower, otherwise this step is managed by migration tool. Change quartz scheduler name in database:*
  ** disable foreign keys on tables `qrtz_cron_triggers`, `qrtz_simple_triggers`, `qrtz_simprop_triggers` and `qrtz_triggers`
  ** execute following SQL update:
@@ -169,7 +169,7 @@ NOTE:
 ----
 
  ** enable foreign keys on tables `qrtz_cron_triggers`, `qrtz_simple_triggers`, `qrtz_simprop_triggers` and `qrtz_triggers`
-
+:::
 * Copy licenses of all your nodes in `platform_conf/licenses`
 * Run the `setup.sh push` or `setup.bat push`. This will update in database the configuration of your platform.
 

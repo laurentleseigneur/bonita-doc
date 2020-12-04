@@ -37,9 +37,9 @@ The users can now:
 * Retrieve information on the case thanks to the case overview, displayed just a tab away from the form.
 * Allow users involved in a case to exchange comments on the case directly from the task list, just a tab away from the form.
 +
-NOTE:
+::: info
   _Note_: User display preferences are stored in the Browser Local Storage
-  
+  :::
 
 +++<a id="new-widgets">++++++</a>+++
 

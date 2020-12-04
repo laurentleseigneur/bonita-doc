@@ -1,8 +1,8 @@
 = Queriable logger
 
-NOTE:
+::: info
 *Note:* For Performance, Efficiency, and Teamwork editions only.
-
+:::
 
 This page describes the queriable logger service.
 

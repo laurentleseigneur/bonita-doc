@@ -1,9 +1,9 @@
 = Monitoring
 :experimental:
 
-NOTE:
+::: info
 *Note:* For Performance and Efficiency editions only.
-
+:::
 
 Monitoring gives information relative to a process.
 

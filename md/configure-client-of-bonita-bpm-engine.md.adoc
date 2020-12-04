@@ -13,12 +13,12 @@ There is three ways to configure the client to connect to the Bonita BPM Engine.
 First the engine client verify if the configuration is set programmatically,
 then it tries to get the configuration set in system properties, finally it falls back to the legacy way of configuration that is the bonita home client.
 
-NOTE:
+::: info
 In order to be able to start the portal with a remote engine the following system properties must be set in the JVM starting the Portal:
 
 * `org.bonitasoft.platform.username` must be set with the username of the platform admin
 * `org.bonitasoft.platform.password` must be set with the password of the platform admin
-
+:::
 
 === Configure Client using programmatic configuration
 
@@ -44,10 +44,10 @@ When using `HTTP` mode, you must set the following system properties
  ** `org.bonitasoft.engine.api-type.server.url`: it is the url of the server, e.g. for a engine on the same host it can be `+http://localhost:8080+`
  ** `org.bonitasoft.engine.api-type.application.name`: it is the name of the web aplication on wich the engine HTTP API is deployed, e.g. `bonita`
 
-NOTE:
+::: warning
 We do not guarantee to keep the http protocol stable, so we strongly recommend that you use the same version for both
 the client and the server
-
+:::
 
 * `EJB3`
 The `EJB3` connection mode will connect the client to the engine using EJBs. +
@@ -57,9 +57,9 @@ You will need to specify at least `org.bonitasoft.engine.ejb.naming.reference` t
 
 === Configure client using Bonita Home client
 
- danger
+::: danger
 Deprecated, use the programmatic way instead, see http://documentation.bonitasoft.com/javadoc/api/${varVersion}/org/bonitasoft/engine/util/APITypeManager.html[APITypeManager].
-
+:::
 
 This is a legacy way to configure the connection to the remote engine.
 
@@ -104,9 +104,9 @@ It is configured in the `web.xml` file of the web application like this:
 </servlet>
 ----
 
-NOTE:
+::: warning
 This HTTP access  is not secured, it should not be exposed outside a trusted area. We recommend you to deactivate it if you expose directly your deployment to the outside world.
-
+:::
 
 === Server configuration to accept EJB3 connection
 

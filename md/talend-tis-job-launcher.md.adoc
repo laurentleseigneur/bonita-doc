@@ -1,8 +1,8 @@
 = Talend TIS Job launcher
 
-NOTE:
+::: info
 *Note:* For Performance, Efficiency, and Teamwork editions only.
-
+:::
 
 The Talend TIS Job launcher connector enables you to launch a Talend Integration Suite (TIS) job.
 

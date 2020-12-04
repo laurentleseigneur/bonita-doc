@@ -1,8 +1,8 @@
 = How to create unique task names for the user task list
 
-NOTE:
+:::info
 *Note*: This howto applies to the legacy task list -Bonita BPM 6.0 to 6.5.x versions- as well as the xref:user-task-list.adoc[new task list - from Bonita BPM 7.3 and above].
-
+:::
 
 Goal: Leverage Bonita BPM Studio to optimize user comfort and efficiency by inserting case information in task name and task description. +
 During process modeling, a task is given a generic definition in the process definition, so its name is generic, such as "Validate request". This is useful for development. +
@@ -227,6 +227,6 @@ To allow users to efficiently search by task name, you can configure the search 
 
 To do so, go to link:using-list-and-search-methods.md#word_based_search[word-based search].
 
-NOTE:
+:::info
 *Note:* Setting the word-based search may result in lesser performance, with some delay experienced by users on the display of search results. Turning this feature on requires some testing on your environment.
-
+:::

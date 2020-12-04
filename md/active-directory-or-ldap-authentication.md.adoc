@@ -1,8 +1,8 @@
 = Active Directory or LDAP authentication
 
-NOTE:
+::: info
 *Note:* For Performance, Efficiency, and Teamwork editions only.
-
+:::
 
 *Important notes:*
 

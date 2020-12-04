@@ -1,8 +1,8 @@
 = Search keys
 
-NOTE:
+::: info
 *Note:* For Performance and Efficiency editions only.
-
+:::
 
 The search field in Bonita BPM Portal can be used to search for particular values in cases, filter them, and display the result.
 

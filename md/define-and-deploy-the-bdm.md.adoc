@@ -6,9 +6,9 @@ The business data model is the definition of the business data that is shared by
 
 Your business data is the information that is shared between your processes and applications. It is defined as a set of business object in a business data model (BDM). There is one BDM that is used by all processes and applications in a tenant.
 
-NOTE:
+::: info
 *:fa-info-circle:*  A BDM is defined at tenant level. It means you can have different BDM per tenant on the same Bonita platform. See <<bdm_storage,BDM data storage>> for more information on how to configure a business data model per tenant.
-
+:::
 
 When you define a process, you specify the business objects that are relevant to the process. When a process is instantiated (a case is started), the specified business objects are instantiated as required, becoming variables within the process instance.
 
@@ -201,10 +201,10 @@ There are two ways to export a business data model: in a ZIP file for deployment
 
 To deploy the BDM, you export it as a ZIP file from Bonita BPM Studio and then import it into Bonita BPM Portal.
 
-NOTE:
+::: warning
 :fa-exclamation-triangle: *Warning:* Before deploying the business data model, you must xref:pause-and-resume-bpm-services.adoc[pause] the BPM services, so that the update can be performed without affecting ongoing processes.
 *Important:* You are recommended xref:back-up-bonita-bpm-platform.adoc[Back up your platform] and database before deploying a new BDM in case of problems during the update.
-
+:::
 
 Follow these steps:
 
@@ -338,9 +338,9 @@ Then, click on the _*pencil*_ button to open the _*Edit Expression*_ editor. Cho
 
 You can use business data in a Java program by using the DAO. DAO gives _*read*_ access to business objects.
 
-NOTE:
+::: warning
 ** :fa-exclamation-triangle: Warning**: In a connector, code is executed outside a transaction, so retrieving or updating business data by DAO is not supported.
-
+:::
 
 You can however manipulate the business object outside the connector, and use business objects as connector input or output:
 

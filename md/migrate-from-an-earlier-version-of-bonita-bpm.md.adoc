@@ -11,7 +11,7 @@ You can migrate your platform using the `Bonita BPM Migration Tool`. There is 2 
 
 For example, if you are migrating from 6.5.3 to 7.1.0, you must migrate from 6.5.3 to 7.0.0 using version 1.x of the _Bonita BPM Migration Tool_, and then migrate from 7.0.0 to 7.1.0 using version 2.x.
 
-NOTE:
+::: warning
 :fa-exclamation-triangle: *Caution:*
 You should always migrate to the latest version of a major version. Usually, maintenance version might contain bug fixes made after the release of subsequent major or minor release.
 
@@ -19,7 +19,7 @@ For example, the 6.5.4 release contains fixes to certain bugs that were found in
 When you are ready to migrate from 6.5.4 to a 7.x.y version, make sure you migrate to at least 7.1.1 to be sure that these fixes are present in your new version after migration.
 To migrate from 6.5.4 to 7.1.1 or later there are two phases: first you upgrade to 7.0.0 then to the latest version.
 You are recommended not to start 7.0.0 after you migrate to it, but to proceed immediately with the second phase of the migration.
-
+:::
 
 *JRE requirements:*
 Version 7 only supports JRE version 7. If you comes from older versions of Bonita supporting JRE 6, you must also upgrade your JRE to version 7. For more info, see Support Guide and Supported Environment Matrix for Server.
@@ -29,11 +29,11 @@ Bonita BPM Subscription Pack edition, you need a valid license for your target v
 If you are upgrading to a new maintenance version and not changing the minor version number (for example, you are migrating from 6.3.0
 to 6.3.1), your current license remains valid after migration.
 
-NOTE:
+::: info
 Starting from version 7.3 there is no more bonita home folder. This means that, if your installation does not have any custom change, then you do not need to configure the bundle any further for an installation migrated in 7.3.
 
 On the other hand, if you have customized your configuration, you will have to use the link:BonitaBPM_platform_setup.md#update_platform_conf[platform setup tool] to send your customized configuration files to the database where configuration is stored from 7.3.
-
+:::
 
 image::images/images-6_0/migration_bigsteps.png[Migration steps]
 
@@ -84,7 +84,7 @@ Then xref:managing-look-feel.adoc[import] your updated custom Look & Feel into B
 
 The migration script supports MySQL, Postgres, Oracle, and MS SQLServer. There is no migration for h2 databases.
 
-NOTE:
+::: warning
 *Important:* +
 The migration operation resets the BonitaBPM configuration files to default version for new settings to be applied (from the _$BONITA_HOME_ folder in <7.3.0 version or inside database in >=7.3.0).
 Therefore, you must do a link:BonitaBPM_platform_setup.md#update_platform_conf[backup of your configuration files] before starting the migration. +
@@ -92,7 +92,7 @@ You will need to merge custom properties and configurations to the migrated envi
 
 Furthermore, from the database point of view, as any operations on a production system, a migration is not a zero risk operation. +
 Therefore, it is strongly recommended to do a xref:back-up-bonita-bpm-platform.adoc[backup of your database] before starting the migration.
-
+:::
 
 == Estimate time required
 
@@ -154,10 +154,10 @@ Specify the following information:
 | bpm
 |===
 
-NOTE:
+::: info
 Note: If you are using MySQL, add `?allowMultiQueries=true` to the URL. For example,
 `db.url=jdbc:mysql://localhost:3306/bonita_migration?allowMultiQueries=true`.
-
+:::
 
 . If you use a custom Look & Feel, xref:managing-look-feel.adoc[export] it, and then xref:managing-look-feel.adoc[restore the default Look & Feel].
 . If you use a Business data model that require to be redeployed (see <<bdm_redeploy,above>>), you can pause the tenant so that as a tenant admin, you'll be able to redeploy the BDM on a paused tenant once migration is done.
