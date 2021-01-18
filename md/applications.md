@@ -42,8 +42,7 @@ To integrate a process into an application, you specify a link in an application
 
 ::: info
 Since Bonita 7.5.0, the definition of applications can be done from the studio, which makes it more straightforward to develop and package with other application artifacts.
-For Enterprise, Efficiency and Performance editions, a graphical editor is provided on top of xml source code.
-For more details, go to [Application descriptors](applicationCreation.md)
+A graphical editor is provided on top of xml source code. For more details, go to [Application descriptors](applicationCreation.md)
 :::
 
 When you have developed all the resources that are used in an application, you are ready to define the application itself.
@@ -149,7 +148,7 @@ To deploy an application, you use the Bonita Portal. You need to import (or crea
 3. Business data model then processes
 4. Application definition
 
-Deploying an application means exporting it from the Portal where you developed it and importing it into another for production.
+Deploying an application means exporting it from the Studio, where you developed it, and importing it into a Portal. The Studio also lets you deploy an application into the local environment with the click of a button.
 
 When you export an application, it includes the following:
 
