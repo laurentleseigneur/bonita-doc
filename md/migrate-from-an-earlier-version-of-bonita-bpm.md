@@ -76,7 +76,7 @@ The following are not migrated automatically:
 * Configuration of the platform: Before 7.3 in the _Bonita Home_ folder and after 7.3 in database. Reapply your customizations manually after the migration script has finished (using [platform setup tool](BonitaBPM_platform_setup.md#update_platform_conf) if migrated to 7.3.0+).
 * Deployed process definitions: The processes will continue to run using the definition created in the previous version of Bonita.
 * Process definition sources (`.bos` files): Migrate these by importing them into the new version of Bonita Studio.
-* <a id="bdm_redeploy" />Business data model, and the business data database: if the migration path include version `7.0.0`,`7.2.0` or `7.2.4`, the Business data model must be redeployed after migration, using [Define and deploy the BDM](define-and-deploy-the-bdm)). Otherwise, no action is required.
+* <a id="bdm_redeploy" />Business data model, and the business data database: if the migration path include version `7.0.0`,`7.2.0` or `7.2.4`, the Business data model must be redeployed after migration. You can pause the tenant before migration, as a tenant admin, so that you'll be able to redeploy the BDM on a paused tenant once migration is done, using [Define and deploy the BDM](define-and-deploy-the-bdm)). Otherwise, no action is required.
 * Custom connectors, actor filers, data types: These might continue to work in the new version, but should be tested, depending on your custom code.
 * Custom pages: These might continue to work in the new version, but should be tested depending on your custom code.
 * Custom reports: These might continue to work in the new version, but should be tested depending on your custom code.
@@ -156,12 +156,12 @@ Specify the following information:
     :::
 
 1. If you use a custom Look & Feel, [export](managing-look-feel.md) it, and then [restore the default Look & Feel](managing-look-feel.md).
-1. If you use a Business data model that requires to be redeployed (see [above](#bdm_redeploy)), you can pause the tenant so that as a tenant admin, you'll be able to redeploy the BDM on a paused tenant once migration is done.  
 
-    ::: warn
+    ::: warning
     **IMPORTANT:** Do **not** [pause the BPM services](pause-and-resume-bpm-services.md) before you stop the application server. It will cause problems. 
     :::
-
+    
+1. If you use a Business data model that requires to be redeployed (see [above](#bdm_redeploy)).  
 1. Stop the application server.
 1. **IMPORTANT:**
 [Back up your platform](back-up-bonita-bpm-platform.md) and database in case of problems during migration.
