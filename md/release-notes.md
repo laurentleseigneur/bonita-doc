@@ -159,3 +159,7 @@ Translations might be added in the next maintenance versions.
 * BPO-655 - LoginServlet redirect param should be optional and default to false
 * BPO-664 - Security risk: API/formsDocumentImage executes injected script
 * BR-454 - Sometimes CallActivity are left Completed without target process
+
+### Fixes in Bonita 7.12.1
+#### Fixes in Bonita Runtime (including Portal)
+* RUNTIME-50/BR-621 - All LDAP group objectclass checks are now case-insensitive.
